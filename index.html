@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="de">
+<head>
+<title>GTA 6 GUIDE – Orte, Geld-Spots &amp; Tipps für Einsteiger</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="GTA 6 GUIDE: Inoffizieller Einsteiger-Guide zu GTA 6 mit Karte von Leonida, Geld-Spots mit Tricks, Checkliste für die ersten Stunden und Release-Countdown. Auf Deutsch und Englisch.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="GTA 6 GUIDE">
+<meta property="og:description" content="Orte, Geld-Spots mit Tricks und eine Start-Checkliste für GTA 6. Inoffizieller Fan-Guide auf Deutsch und Englisch.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#06141f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2306141f'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-weight='900' font-size='30' text-anchor='middle' fill='%23ff5470'%3E6%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,600;0,800;1,800;1,900&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: Collage-Kopf mit schrägen Bildfeldern, danach Geld-Tipps zuerst, dann Orte mit Karte + Tabs, unten Checkliste und Fehler nebeneinander. Nacht-Ozean statt Lila. */
+:root {
+  --ocean: #06141f;
+  --ocean-2: #0b2131;
+  --panel: #102c3f;
+  --line: #1d4258;
+  --text: #eef8fb;
+  --muted: #9dbccb;
+  --aqua: #2de2e6;
+  --coral: #ff5470;
+  --gold: #ffc23d;
+  --cash: #6ff59a;
+  --font-display: "Kanit", "Arial Black", "Helvetica Neue", sans-serif;
+  --font-body: "Manrope", "Segoe UI", system-ui, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body { background: var(--ocean); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.6; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--ocean); }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1160px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.label { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; }
+
+/* Nav */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--ocean) 90%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 20px; padding-block: 10px; flex-wrap: wrap; }
+.brand { font-family: var(--font-display); font-style: italic; font-weight: 900; font-size: 1.45rem; text-decoration: none; color: var(--text); white-space: nowrap; letter-spacing: -.01em; }
+.brand span { color: var(--coral); }
+.nav-right { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.nav ul { display: flex; gap: 2px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+.nav ul a { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .82rem; color: var(--muted); text-decoration: none; padding: 6px 10px; border-radius: 6px; }
+.nav ul a:hover { color: var(--text); background: var(--panel); }
+.lang { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.lang button { font-family: var(--font-display); font-weight: 600; letter-spacing: .1em; font-size: .8rem; background: transparent; color: var(--muted); border: 0; padding: 6px 10px; cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--aqua); color: var(--ocean); }
+
+/* Hero: Collage */
+.hero { padding-block: 48px 40px; background: radial-gradient(120% 80% at 80% 0%, #123a52 0%, var(--ocean) 60%); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+@media (max-width: 880px) { .hero .wrap { grid-template-columns: 1fr; } }
+.hero .label { color: var(--aqua); }
+.hero h1 { font-family: var(--font-display); font-style: italic; font-weight: 900; font-size: clamp(3.4rem, 10vw, 7rem); line-height: .86; margin: 14px 0 20px; letter-spacing: -.02em; text-transform: uppercase; }
+.hero h1 .l1 { display: block; color: var(--text); }
+.hero h1 .l2 { display: inline-block; color: var(--ocean); background: linear-gradient(90deg, var(--coral), var(--gold)); padding: 0 .14em .04em .08em; transform: skewX(-8deg); }
+.hero .lead { max-width: 32rem; font-size: 1.1rem; color: #d3e8f0; margin: 0; }
+.countdown { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 26px; }
+.cd { border: 1px solid var(--line); background: var(--ocean-2); border-radius: 8px; padding: 8px 12px; min-width: 70px; }
+.cd b { display: block; font-family: var(--font-display); font-weight: 800; font-size: 1.8rem; line-height: 1.1; font-variant-numeric: tabular-nums; color: var(--gold); }
+.cd small { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); font-size: .7rem; }
+.cd-note { margin-top: 10px; font-size: .85rem; color: var(--muted); }
+.cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+.btn { font-family: var(--font-display); font-weight: 800; font-style: italic; text-transform: uppercase; letter-spacing: .04em; text-decoration: none; padding: 12px 22px; font-size: 1rem; transform: skewX(-8deg); display: inline-block; }
+.btn > span { display: inline-block; transform: skewX(8deg); }
+.btn.primary { background: var(--coral); color: #fff; }
+.btn.ghost { border: 2px solid var(--aqua); color: var(--aqua); }
+.btn:hover { filter: brightness(1.1); }
+
+.collage { display: grid; grid-template-columns: 1.2fr 1fr; grid-template-rows: 170px 130px 120px; gap: 10px; transform: rotate(-3deg); max-width: 100%; }
+.tile { position: relative; overflow: hidden; border: 3px solid var(--text); background: var(--panel); }
+.tile span { position: absolute; left: 10px; bottom: 8px; font-family: var(--font-display); font-style: italic; font-weight: 900; text-transform: uppercase; font-size: 1.05rem; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,.6); }
+.t1 { grid-row: 1 / 3; background: linear-gradient(180deg, #ff9a5a 0%, #ff5470 45%, #6a2a6e 70%, #0b2131 100%); }
+.t1::before { content: ""; position: absolute; left: 50%; top: 32%; width: 46%; aspect-ratio: 1; transform: translateX(-50%); border-radius: 50%; background: #ffd66b; -webkit-mask: repeating-linear-gradient(180deg, #000 0 10px, transparent 10px 14px); mask: repeating-linear-gradient(180deg, #000 0 10px, transparent 10px 14px); }
+.t1::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 32%; background: #0b2131;
+  clip-path: polygon(0 40%, 8% 40%, 8% 10%, 16% 10%, 16% 30%, 24% 30%, 24% 0, 30% 0, 30% 25%, 40% 25%, 40% 45%, 50% 45%, 50% 15%, 58% 15%, 58% 35%, 68% 35%, 68% 5%, 74% 5%, 74% 40%, 86% 40%, 86% 20%, 94% 20%, 94% 40%, 100% 40%, 100% 100%, 0 100%); }
+.t2 { background: linear-gradient(180deg, #7ee8fa 0%, #2de2e6 55%, #0f8c9e 56%, #0a5f73 100%); }
+.t2::after { content: ""; position: absolute; left: 30%; top: 52%; width: 34%; height: 10%; background: #fff; border-radius: 0 0 40% 40%; }
+.t3 { background: linear-gradient(180deg, #9fd8a0 0%, #3e8f63 50%, #1f5a45 100%); }
+.t3::after { content: ""; position: absolute; left: 12%; right: 12%; bottom: 22%; height: 18%; background: rgba(6,20,31,.35); border-radius: 50%; }
+.t4 { grid-column: 1 / 3; background: linear-gradient(90deg, #0b2131, #1d4258); }
+.t4::before { content: "★★★★★"; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-size: 1.6rem; letter-spacing: .15em; color: var(--gold); }
+@media (max-width: 880px) { .collage { transform: rotate(-2deg); grid-template-rows: 140px 110px 90px; margin: 10px 6px 0; } }
+
+/* Facts strip */
+.facts { border-block: 1px solid var(--line); background: var(--ocean-2); }
+.facts .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; padding-block: 16px; }
+@media (max-width: 720px) { .facts .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.fact small { display: block; color: var(--muted); font-family: var(--font-display); font-weight: 600; text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; }
+.fact b { font-family: var(--font-display); font-style: italic; font-weight: 800; font-size: 1.25rem; }
+
+/* Sections */
+section.block { padding-block: 64px 16px; }
+.sec-head { display: flex; justify-content: space-between; align-items: end; gap: 16px; flex-wrap: wrap; margin-bottom: 26px; }
+.sec-head .label { color: var(--coral); }
+.sec-head h2 { font-family: var(--font-display); font-style: italic; font-weight: 900; text-transform: uppercase; font-size: clamp(2.1rem, 5.5vw, 3.3rem); line-height: .95; margin: 8px 0 0; letter-spacing: -.01em; text-wrap: balance; }
+.sec-head p { max-width: 30rem; color: var(--muted); margin: 0; }
+
+/* Geld-Spots */
+.spots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 960px) { .spots { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .spots { grid-template-columns: 1fr; } }
+.spot { background: var(--ocean-2); border: 1px solid var(--line); display: flex; flex-direction: column; }
+.shot { position: relative; aspect-ratio: 16 / 9; max-width: 100%; overflow: hidden; border-bottom: 3px solid var(--text); }
+.shot::before, .shot::after { content: ""; position: absolute; }
+.shot .where { position: absolute; left: 10px; top: 10px; z-index: 2; font-family: var(--font-display); font-weight: 600; text-transform: uppercase; letter-spacing: .1em; font-size: .7rem; background: rgba(6,20,31,.8); color: var(--text); padding: 3px 8px; }
+.shot .pay { position: absolute; right: 10px; top: 10px; z-index: 2; font-family: var(--font-display); font-weight: 800; font-size: .9rem; background: var(--cash); color: var(--ocean); padding: 1px 8px; }
+.shot .ill { position: absolute; right: 10px; bottom: 8px; z-index: 2; font-size: .68rem; color: rgba(255,255,255,.8); text-shadow: 0 1px 3px rgba(0,0,0,.7); }
+.shot .mark { position: absolute; z-index: 2; width: 26px; height: 26px; border-radius: 50%; background: var(--coral); border: 3px solid #fff; box-shadow: 0 0 0 6px rgba(255,84,112,.35); display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; color: #fff; font-size: .8rem; transform: translate(-50%, -50%); }
+/* Szenen (Illustrationen) */
+.sc-store { background: linear-gradient(180deg, #1b1446 0%, #4a1f5c 55%, #20283a 56%, #151b28 100%); }
+.sc-store::before { left: 18%; right: 18%; bottom: 44%; height: 34%; background: #2e2a3e; border-top: 8px solid #ff5470; }
+.sc-store::after { left: 26%; right: 26%; bottom: 46%; height: 20%; background: repeating-linear-gradient(90deg, #ffe08a 0 22%, #2e2a3e 22% 26%); opacity: .85; }
+.sc-harbor { background: linear-gradient(180deg, #ff9a5a 0%, #b9466e 45%, #0a3550 46%, #06202f 100%); }
+.sc-harbor::before { left: 8%; bottom: 54%; width: 60%; height: 22%; background: repeating-linear-gradient(90deg, #d9534f 0 18%, #2a7ab0 18% 36%, #e0a33a 36% 54%, #3b8f5a 54% 72%); }
+.sc-harbor::after { right: 10%; bottom: 54%; width: 6%; height: 40%; background: #0b2131; box-shadow: -30px -40px 0 -2px transparent; border-top: 14px solid #ffc23d; }
+.sc-beach { background: linear-gradient(180deg, #ff6f91 0%, #ffc275 40%, #f5d9a8 70%, #d9b47c 100%); }
+.sc-beach::before { left: 22%; bottom: 18%; width: 56%; height: 18%; background: #e8173f; border-radius: 30% 40% 8px 8px / 60% 60% 8px 8px; box-shadow: inset 0 -6px 0 #8a0f26; }
+.sc-beach::after { left: 30%; bottom: 10%; width: 40%; height: 12%; background: radial-gradient(circle at 12% 50%, #111 0 32%, transparent 34%), radial-gradient(circle at 88% 50%, #111 0 32%, transparent 34%); }
+.sc-keys { background: linear-gradient(180deg, #8ee6f5 0%, #c9f3f7 40%, #2de2e6 41%, #0f8c9e 100%); }
+.sc-keys::before { left: 34%; top: 52%; width: 34%; height: 12%; background: #fff; border-radius: 0 0 50% 50%; box-shadow: 0 -10px 0 -4px #0b2131; }
+.sc-keys::after { left: 6%; top: 34%; width: 22%; height: 9%; background: #d9b47c; border-radius: 50%; }
+.sc-ambrosia { background: linear-gradient(180deg, #e88b4a 0%, #a8553a 45%, #4a3a33 46%, #2b2420 100%); }
+.sc-ambrosia::before { left: 10%; bottom: 54%; width: 50%; height: 30%; background: #2b2420; clip-path: polygon(0 100%, 0 40%, 15% 40%, 15% 0, 25% 0, 25% 40%, 45% 40%, 45% 15%, 55% 15%, 55% 40%, 100% 40%, 100% 100%); }
+.sc-ambrosia::after { left: 30%; bottom: 14%; width: 46%; height: 22%; background: linear-gradient(90deg, #c9c2b6 0 72%, #ffc23d 72% 100%); box-shadow: inset 0 -6px 0 #111; }
+.sc-grass { background: linear-gradient(180deg, #b5e3a8 0%, #5aa36b 45%, #2c6b4f 46%, #1b4a3a 100%); }
+.sc-grass::before { left: 30%; top: 56%; width: 34%; height: 10%; background: #c9c2b6; border-radius: 0 0 40% 40%; }
+.sc-grass::after { left: 50%; top: 40%; width: 8%; height: 18%; background: #333; border-radius: 4px 4px 0 0; }
+.spot .body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.spot h3 { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 1.25rem; line-height: 1.2; }
+.spot .trick { color: var(--gold); }
+.spot ol { margin: 0; padding-left: 20px; color: #cfe2ea; font-size: .95rem; display: grid; gap: 4px; }
+.spot .foot { margin-top: auto; padding-top: 10px; border-top: 1px dashed var(--line); display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; font-size: .8rem; color: var(--muted); }
+.status b { color: var(--gold); font-weight: 700; }
+.status b.ok { color: var(--aqua); }
+.tomap { background: none; border: 1px solid var(--aqua); color: var(--aqua); font-family: var(--font-display); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .72rem; padding: 4px 10px; cursor: pointer; }
+.tomap:hover { background: var(--aqua); color: var(--ocean); }
+.photo-note { margin-top: 18px; padding: 14px 18px; border: 1px dashed var(--line); color: var(--muted); font-size: .9rem; }
+
+/* Places: tabs + map + detail */
+.ptabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
+.ptab { font-family: var(--font-display); font-style: italic; font-weight: 800; text-transform: uppercase; font-size: .95rem; background: var(--ocean-2); color: var(--muted); border: 1px solid var(--line); padding: 8px 14px; cursor: pointer; transform: skewX(-8deg); }
+.ptab > span { display: inline-block; transform: skewX(8deg); }
+.ptab[aria-selected="true"] { background: var(--coral); border-color: var(--coral); color: #fff; }
+.places-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px; align-items: stretch; }
+@media (max-width: 860px) { .places-grid { grid-template-columns: 1fr; } }
+.map { margin: 0; background: var(--ocean-2); border: 1px solid var(--line); padding: 12px; }
+.map svg { width: 100%; height: auto; display: block; }
+.map figcaption { font-size: .8rem; color: var(--muted); margin-top: 6px; }
+.pin { cursor: pointer; }
+.pin circle.ring { fill: none; stroke: var(--gold); stroke-width: 2.5; opacity: 0; transition: opacity .2s; }
+.pin.active circle.ring, .pin:hover circle.ring, .pin:focus circle.ring { opacity: 1; }
+.pin.active circle.dot { fill: var(--gold); }
+.pin text { font-family: var(--font-display); font-weight: 600; font-size: 13px; fill: var(--text); letter-spacing: .05em; paint-order: stroke; stroke: var(--ocean-2); stroke-width: 4px; }
+.pin:focus { outline: none; }
+.detail { background: var(--panel); border: 1px solid var(--line); padding: 24px; display: flex; flex-direction: column; gap: 10px; }
+.detail .zone { color: var(--aqua); }
+.detail h3 { margin: 0; font-family: var(--font-display); font-style: italic; font-weight: 900; text-transform: uppercase; font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1; }
+.meter { display: flex; align-items: center; gap: 10px; }
+.meter .bars { display: flex; gap: 4px; }
+.meter .bars i { width: 22px; height: 10px; background: var(--line); transform: skewX(-12deg); }
+.meter .bars i.on { background: var(--cash); }
+.meter small { color: var(--muted); font-size: .85rem; }
+.detail p { margin: 0; color: #d3e8f0; }
+.detail ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.detail li { padding-left: 22px; position: relative; color: #d3e8f0; }
+.detail li::before { content: "$"; position: absolute; left: 0; color: var(--cash); font-weight: 700; }
+
+/* Bottom: checklist + mistakes */
+.duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+@media (max-width: 860px) { .duo { grid-template-columns: 1fr; } }
+.progress { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; flex-wrap: wrap; }
+.progress b { font-family: var(--font-display); font-style: italic; font-weight: 900; font-size: 2.2rem; line-height: 1; font-variant-numeric: tabular-nums; color: var(--cash); }
+.bar { flex: 1 1 140px; height: 10px; background: var(--line); overflow: hidden; transform: skewX(-12deg); }
+.bar i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--aqua), var(--cash)); transition: width .3s; }
+.prog-text { color: var(--muted); margin: 0 0 12px; font-size: .92rem; }
+.checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.checklist label { display: flex; gap: 12px; align-items: flex-start; background: var(--ocean-2); border: 1px solid var(--line); padding: 10px 14px; cursor: pointer; }
+.checklist input { accent-color: var(--aqua); width: 19px; height: 19px; margin-top: 3px; flex: none; }
+.checklist input:checked + span { color: var(--muted); text-decoration: line-through; }
+.reset { margin-top: 12px; background: none; border: 1px solid var(--line); color: var(--muted); padding: 6px 12px; cursor: pointer; font-family: var(--font-display); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; }
+.donts { display: grid; gap: 0; }
+.dont { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.dont .x { flex: none; font-family: var(--font-display); font-weight: 900; color: var(--coral); font-size: 1.4rem; line-height: 1.1; }
+.dont h3 { margin: 0 0 2px; font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; }
+.dont p { margin: 0; color: var(--muted); font-size: .94rem; }
+.sub-h { font-family: var(--font-display); font-style: italic; font-weight: 900; text-transform: uppercase; font-size: clamp(1.8rem, 4.5vw, 2.5rem); line-height: 1; margin: 8px 0 8px; }
+.sub-p { color: var(--muted); margin: 0 0 18px; }
+.duo .label { color: var(--coral); }
+
+footer { margin-top: 72px; border-top: 1px solid var(--line); background: var(--ocean-2); }
+footer .wrap { padding-block: 26px 40px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: .85rem; }
+footer > .wrap > div { max-width: 40rem; }
+</style>
+<style>[hidden]{display:none!important} body{margin:0} img{max-width:100%}</style>
+</head>
+<body>
+
+
+<nav class="nav" aria-label="Navigation">
+  <div class="wrap">
+    <a class="brand" href="#top">GTA 6 <span>GUIDE</span></a>
+    <div class="nav-right">
+      <ul>
+        <li><a href="#geld" data-i18n="nav_money">Geld-Tipps</a></li>
+        <li><a href="#orte" data-i18n="nav_places">Orte</a></li>
+        <li><a href="#start" data-i18n="nav_start">Erste Stunden</a></li>
+      </ul>
+      <div class="lang" role="group" aria-label="Sprache / Language">
+        <button type="button" id="lang-de" data-lang="de" aria-pressed="true" title="Deutsch">DE</button>
+        <button type="button" id="lang-en" data-lang="en" aria-pressed="false" title="English">EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="label" data-i18n="hero_eyebrow">Willkommen in Leonida · Fan-Guide für Einsteiger</div>
+      <h1><span class="l1">GTA 6</span><span class="l2">Guide</span></h1>
+      <p class="lead" data-i18n="hero_lead">Die wichtigsten Orte, die besten Wege zu schnellem Geld und eine Checkliste für deine ersten Stunden in Vice City. Kurz, übersichtlich, ohne Spoiler.</p>
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div class="cd"><b id="cd-d">--</b><small data-i18n="cd_d">Tage</small></div>
+        <div class="cd"><b id="cd-h">--</b><small data-i18n="cd_h">Std</small></div>
+        <div class="cd"><b id="cd-m">--</b><small data-i18n="cd_m">Min</small></div>
+        <div class="cd"><b id="cd-s">--</b><small data-i18n="cd_s">Sek</small></div>
+      </div>
+      <div class="cd-note" id="cd-note"></div>
+      <div class="cta">
+        <a class="btn primary" href="#geld"><span data-i18n="cta_money">Zu den Geld-Tipps</span></a>
+        <a class="btn ghost" href="#orte"><span data-i18n="cta_map">Karte ansehen</span></a>
+      </div>
+    </div>
+    <div class="collage" aria-hidden="true">
+      <div class="tile t1"><span>Vice City</span></div>
+      <div class="tile t2"><span>Leonida Keys</span></div>
+      <div class="tile t3"><span>Grassrivers</span></div>
+      <div class="tile t4"><span>Leonida</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="facts">
+  <div class="wrap">
+    <div class="fact"><small data-i18n="fact_state">Bundesstaat</small><b>Leonida</b></div>
+    <div class="fact"><small data-i18n="fact_city">Hauptstadt der Action</small><b>Vice City</b></div>
+    <div class="fact"><small data-i18n="fact_chars">Hauptfiguren</small><b>Lucia &amp; Jason</b></div>
+    <div class="fact"><small data-i18n="fact_platforms">Plattformen</small><b>PS5 · Xbox Series</b></div>
+  </div>
+</div>
+
+<main>
+  <section class="block" id="geld">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="label" data-i18n="money_eyebrow">Geld verdienen</div>
+          <h2 data-i18n="money_title">Geld-Spots</h2>
+        </div>
+        <p data-i18n="money_intro"></p>
+      </div>
+      <div class="spots" id="spots"></div>
+      <p class="photo-note" data-i18n="photo_note"></p>
+    </div>
+  </section>
+
+  <section class="block" id="orte">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <div class="label" data-i18n="places_eyebrow">Die Karte</div>
+          <h2 data-i18n="places_title">Orte in Leonida</h2>
+        </div>
+        <p data-i18n="places_intro"></p>
+      </div>
+      <div class="ptabs" role="tablist" id="ptabs"></div>
+      <div class="places-grid">
+        <figure class="map">
+          <svg viewBox="0 0 400 460" role="img" aria-label="Leonida">
+            <defs>
+              <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0a2a3d"/><stop offset="1" stop-color="#083347"/></linearGradient>
+              <linearGradient id="land" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f4a5c"/><stop offset="1" stop-color="#173d4d"/></linearGradient>
+            </defs>
+            <rect width="400" height="460" fill="url(#sea)"/>
+            <path fill="url(#land)" stroke="#2f6f86" stroke-width="2" d="M20 30 L330 22 L340 60 L318 92 L330 140 L322 200 L338 262 L330 320 L300 372 L270 392 L240 376 L226 330 L196 292 L176 240 L150 196 L120 168 L80 150 L46 120 L22 90 Z"/>
+            <g fill="#173d4d" stroke="#2f6f86" stroke-width="1.5">
+              <ellipse cx="248" cy="410" rx="14" ry="6"/><ellipse cx="214" cy="424" rx="12" ry="5"/><ellipse cx="180" cy="436" rx="11" ry="5"/><ellipse cx="146" cy="444" rx="9" ry="4"/>
+            </g>
+            <path d="M200 240 C230 260 250 300 250 330" stroke="#2c7a55" stroke-width="22" fill="none" opacity=".6" stroke-linecap="round"/>
+            <g id="pins"></g>
+          </svg>
+          <figcaption data-i18n="map_caption"></figcaption>
+        </figure>
+        <article class="detail" id="detail" role="tabpanel" aria-live="polite"></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="start">
+    <div class="wrap duo">
+      <div>
+        <div class="label" data-i18n="check_eyebrow">Checkliste</div>
+        <h2 class="sub-h" data-i18n="check_title">Deine ersten Stunden</h2>
+        <p class="sub-p" data-i18n="check_intro"></p>
+        <div class="progress"><b id="prog-num">0 / 0</b><div class="bar"><i id="prog-bar"></i></div></div>
+        <p class="prog-text" id="prog-text"></p>
+        <ul class="checklist" id="checklist"></ul>
+        <button class="reset" type="button" id="reset" data-i18n="reset">Zurücksetzen</button>
+      </div>
+      <div id="fehler">
+        <div class="label" data-i18n="mist_eyebrow">Vermeiden</div>
+        <h2 class="sub-h" data-i18n="mist_title">Anfänger-Fehler, die Geld kosten</h2>
+        <p class="sub-p" data-i18n="mist_intro"></p>
+        <div class="donts" id="donts"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top">GTA 6 <span>GUIDE</span></a>
+    <div data-i18n="footer"></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var lang = "de";
+  try { var l = localStorage.getItem("gta6guide-lang"); if (l === "en" || l === "de") lang = l; } catch (e) {}
+
+  var T = {
+    de: {
+      nav_places: "Orte", nav_money: "Geld-Spots", nav_start: "Erste Stunden",
+      hero_eyebrow: "Willkommen in Leonida · Fan-Guide für Einsteiger",
+      hero_lead: "Die wichtigsten Orte, die besten Wege zu schnellem Geld und eine Checkliste für deine ersten Stunden in Vice City. Kurz, übersichtlich, ohne Spoiler.",
+      cd_d: "Tage", cd_h: "Std", cd_m: "Min", cd_s: "Sek",
+      cd_note: "Countdown bis zum angekündigten Release am 19. November 2026 (PS5 &amp; Xbox Series X|S).",
+      cd_out: "GTA 6 ist erschienen. Viel Spaß in Leonida!",
+      cta_money: "Zu den Geld-Spots", cta_map: "Karte ansehen",
+      fact_state: "Bundesstaat", fact_city: "Hauptstadt der Action", fact_chars: "Hauptfiguren", fact_platforms: "Plattformen",
+      places_eyebrow: "Die Karte", places_title: "Orte in Leonida",
+      places_intro: "Wähle eine Region oben oder tippe auf einen Pin. Die grünen Balken zeigen, wie viel Geld ein Einsteiger dort vermutlich verdienen kann.",
+      map_caption: "Schematisch und nicht maßstabsgetreu. Grundlage sind die offiziellen Trailer und Regionsnamen.",
+      money_eyebrow: "Wo du Geld machst", money_title: "Geld-Spots",
+      money_intro: "Hier gehst du hin, um Geld zu machen, mit Trick Schritt für Schritt. Jeder Spot zeigt, ob er im Trailer zu sehen war oder auf früheren GTA-Teilen beruht.",
+      photo_note: "Die Bilder sind Illustrationen. Echte Screenshots von jedem Spot kommen nach dem Release am 19. November dazu.",
+      trick: "Der Trick", tomap: "Auf Karte zeigen", illu: "Illustration",
+      f_all: "Alle", cat_anf: "Anfänger", cat_fort: "Fortgeschritten", cat_spar: "Geld sparen",
+      proven: '<b class="ok">Im Trailer gezeigt</b>', expected: "<b>Aus früheren Teilen</b>",
+      check_eyebrow: "Checkliste", check_title: "Deine ersten Stunden",
+      check_intro: "Hak ab, was du erledigt hast. Dein Fortschritt bleibt in deinem Browser gespeichert.",
+      reset: "Zurücksetzen",
+      prog_0: "Leg los mit dem ersten Punkt.", prog_all: "Alles erledigt. Leonida gehört dir.", prog_left: "Noch {n} Schritte bis zum Profi.",
+      mist_eyebrow: "Vermeiden", mist_title: "Anfänger-Fehler, die Geld kosten",
+      mist_intro: "Diese Fehler kosten am Anfang am meisten Geld.",
+      footer: "Inoffizieller Fan-Guide. Nicht mit Rockstar Games oder Take-Two Interactive verbunden.<br>Infos basieren auf offiziellen Trailern und Erfahrungen aus früheren Teilen und werden nach dem Release aktualisiert.",
+      potential: "Geld-Potenzial"
+    },
+    en: {
+      nav_places: "Places", nav_money: "Money Spots", nav_start: "First Hours",
+      hero_eyebrow: "Welcome to Leonida · Beginner's fan guide",
+      hero_lead: "The key locations, the best ways to make quick cash and a checklist for your first hours in Vice City. Short, clear and spoiler-free.",
+      cd_d: "Days", cd_h: "Hrs", cd_m: "Min", cd_s: "Sec",
+      cd_note: "Countdown to the announced release on November 19, 2026 (PS5 &amp; Xbox Series X|S).",
+      cd_out: "GTA 6 is out. Have fun in Leonida!",
+      cta_money: "Go to money spots", cta_map: "View the map",
+      fact_state: "State", fact_city: "Center of the action", fact_chars: "Main characters", fact_platforms: "Platforms",
+      places_eyebrow: "The map", places_title: "Places in Leonida",
+      places_intro: "Pick a region above or tap a pin. The green bars show how much money a beginner can likely make there.",
+      map_caption: "Schematic, not to scale. Based on the official trailers and region names.",
+      money_eyebrow: "Where to make money", money_title: "Money spots",
+      money_intro: "Go here to make money, with the trick step by step. Each spot shows whether it was seen in a trailer or is based on earlier GTA games.",
+      photo_note: "The pictures are illustrations. Real screenshots of every spot will be added after the release on November 19.",
+      trick: "The trick", tomap: "Show on map", illu: "Illustration",
+      f_all: "All", cat_anf: "Beginner", cat_fort: "Advanced", cat_spar: "Save money",
+      proven: '<b class="ok">Shown in a trailer</b>', expected: "<b>From earlier games</b>",
+      check_eyebrow: "Checklist", check_title: "Your first hours",
+      check_intro: "Tick off what you've done. Your progress is saved in your browser.",
+      reset: "Reset",
+      prog_0: "Start with the first step.", prog_all: "All done. Leonida is yours.", prog_left: "{n} steps left to go pro.",
+      mist_eyebrow: "Avoid", mist_title: "Beginner mistakes that cost money",
+      mist_intro: "These mistakes cost you the most money early on.",
+      footer: "Unofficial fan guide. Not affiliated with Rockstar Games or Take-Two Interactive.<br>Info is based on the official trailers and earlier games and will be updated after release.",
+      potential: "Money potential"
+    }
+  };
+  function t(k) { return T[lang][k]; }
+
+  var places = [
+    { id: "vice", name: "Vice City", x: 300, y: 300, cash: 5,
+      zone: { de: "Großstadt im Südosten", en: "Big city in the southeast" },
+      text: { de: "Das Zentrum von Leonida mit Strand, Hochhäusern, Clubs und Hafen. Hier gibt es die meisten Aufträge, Geschäfte und reichen Ziele.",
+              en: "The heart of Leonida with beaches, skyscrapers, clubs and a harbor. This is where you'll find the most jobs, businesses and rich targets." },
+      tips: { de: ["Viele Läden und Geschäfte für schnelle Aufträge", "Hafen und Luxusviertel für größere Coups", "Nachtleben: Clubs als mögliche Investition"],
+              en: ["Lots of stores and businesses for quick jobs", "Harbor and luxury districts for bigger heists", "Nightlife: clubs as a possible investment"] } },
+    { id: "keys", name: "Leonida Keys", x: 200, y: 425, cash: 3,
+      zone: { de: "Inselkette im Süden", en: "Island chain in the south" },
+      text: { de: "Türkises Wasser, Boote und Inseln. Ideal für alles, was mit Booten zu tun hat, und ruhiger als die Stadt.",
+              en: "Turquoise water, boats and islands. Great for anything involving boats, and calmer than the city." },
+      tips: { de: ["Boote finden und verkaufen", "Schmuggel-Routen über das Wasser", "Gute Fluchtwege bei Fahndungslevel"],
+              en: ["Find and sell boats", "Smuggling routes over the water", "Good escape routes when you're wanted"] } },
+    { id: "grass", name: "Grassrivers", x: 225, y: 250, cash: 2,
+      zone: { de: "Sumpfland in der Mitte", en: "Wetlands in the middle" },
+      text: { de: "Weite Sümpfe mit Alligatoren und Luftbooten. Abgelegen, also gut, um unterzutauchen.",
+              en: "Wide swamps with alligators and airboats. Remote, so it's a good place to lie low." },
+      tips: { de: ["Abgelegene Verstecke", "Erkunden für versteckte Gegenstände", "Achtung vor Alligatoren"],
+              en: ["Remote hideouts", "Explore for hidden items", "Watch out for alligators"] } },
+    { id: "port", name: "Port Gellhorn", x: 95, y: 110, cash: 3,
+      zone: { de: "Hafenstadt im Nordwesten", en: "Port town in the northwest" },
+      text: { de: "Eine raue, etwas heruntergekommene Küstenstadt. Weniger Polizei, dafür viele kleine, schnelle Jobs.",
+              en: "A rough, run-down coastal town. Less police, but plenty of small, quick jobs." },
+      tips: { de: ["Günstigere Einstiegs-Immobilien vermutet", "Kleine Raubüberfälle mit wenig Risiko", "Gut für die ersten Spielstunden"],
+              en: ["Likely cheaper starter properties", "Small robberies with low risk", "Good for your first hours"] } },
+    { id: "ambrosia", name: "Ambrosia", x: 230, y: 70, cash: 3,
+      zone: { de: "Industriegebiet im Landesinneren", en: "Inland industrial area" },
+      text: { de: "Fabriken, Raffinerien und Biker-Szene. Hier läuft viel Ware über Lastwagen und Züge.",
+              en: "Factories, refineries and a biker scene. Lots of goods move through here by truck and train." },
+      tips: { de: ["Lieferungen und Transportaufträge", "Fahrzeug-Diebstahl im Industriegebiet", "Kontakte zu Bikergangs"],
+              en: ["Deliveries and transport jobs", "Vehicle theft in the industrial zone", "Contacts with biker gangs"] } },
+    { id: "kalaga", name: "Mount Kalaga", x: 300, y: 130, cash: 1,
+      zone: { de: "Nationalpark im Norden", en: "National park in the north" },
+      text: { de: "Wälder, Seen und Hügel. Kaum Geld, aber Natur, Jagd und Ruhe zum Erkunden.",
+              en: "Forests, lakes and hills. Little money, but nature, hunting and quiet places to explore." },
+      tips: { de: ["Erkunden und Sammelobjekte", "Mögliche Jagd- oder Angel-Aktivitäten", "Ruhiger Rückzugsort"],
+              en: ["Exploring and collectibles", "Possible hunting or fishing activities", "A quiet retreat"] } }
+  ];
+
+  var spots = [
+    { id: "store", scene: "sc-store", place: "vice", pay: "$", proven: true, mx: 50, my: 52,
+      title: { de: "Kleine Läden in Vice City", en: "Corner stores in Vice City" },
+      where: { de: "Vice City · Läden an Hauptstraßen", en: "Vice City · stores on main roads" },
+      steps: { de: ["Laden mit Hinterausgang oder Seitenstraße wählen", "Fluchtauto direkt vor der Tür parken, mit dem Heck zur Straße", "Nach dem Überfall nicht auf die Hauptstraße, sondern durch Gassen abtauchen"],
+               en: ["Pick a store with a back exit or side alley", "Park the getaway car right at the door, facing the street", "After the robbery, skip the main road and lose the cops in alleys"] } },
+    { id: "harbor", scene: "sc-harbor", place: "vice", pay: "$$$", proven: false, mx: 40, my: 48,
+      title: { de: "Hafen von Vice City", en: "Vice City harbor" },
+      where: { de: "Vice City · Containerterminal", en: "Vice City · container terminal" },
+      steps: { de: ["Nachts kommen, dann sind weniger Wachen unterwegs", "Erst die Kameras und Wachrouten beobachten", "Wertvolle Ladung per Boot wegbringen statt über die Straße"],
+               en: ["Come at night when fewer guards are around", "Watch the cameras and guard routes first", "Move valuable cargo by boat instead of by road"] } },
+    { id: "cars", scene: "sc-beach", place: "vice", pay: "$$", proven: false, mx: 50, my: 64,
+      title: { de: "Luxusautos am Strand", en: "Luxury cars by the beach" },
+      where: { de: "Vice City · Hotels an der Strandpromenade", en: "Vice City · hotels on the beachfront" },
+      steps: { de: ["Vor teuren Hotels parken die wertvollsten Autos", "Langsam und ohne Schaden zum Händler fahren, Kratzer senken den Preis", "Pro Tag nur ein paar Autos verkaufen, falls es ein Limit gibt"],
+               en: ["The most valuable cars park outside expensive hotels", "Drive to the dealer slowly without damage, scratches lower the price", "Sell only a few cars per day in case there is a limit"] } },
+    { id: "boats", scene: "sc-keys", place: "keys", pay: "$$", proven: false, mx: 52, my: 58,
+      title: { de: "Boote in den Leonida Keys", en: "Boats in the Leonida Keys" },
+      where: { de: "Leonida Keys · Marinas und Anleger", en: "Leonida Keys · marinas and docks" },
+      steps: { de: ["Schnelle Boote an den Anlegern der Inseln suchen", "Über das Wasser fliehen, Polizeiautos können nicht folgen", "Zwischen den Inseln abtauchen, bis die Sterne weg sind"],
+               en: ["Look for fast boats at the island docks", "Escape over the water, police cars can't follow", "Hide between the islands until the stars are gone"] } },
+    { id: "trucks", scene: "sc-ambrosia", place: "ambrosia", pay: "$$", proven: false, mx: 52, my: 74,
+      title: { de: "Lkw-Ladungen in Ambrosia", en: "Truck cargo in Ambrosia" },
+      where: { de: "Ambrosia · Fabriken und Raffinerie", en: "Ambrosia · factories and refinery" },
+      steps: { de: ["Lastwagen fahren zwischen Fabriken und Highway", "Auf Landstraßen abfangen, dort ist weniger Polizei", "Ladung in einer abgelegenen Halle abliefern oder verkaufen"],
+               en: ["Trucks run between factories and the highway", "Intercept them on country roads, there are fewer cops", "Drop off or sell the cargo at a remote warehouse"] } },
+    { id: "swamp", scene: "sc-grass", place: "grass", pay: "$", proven: false, mx: 48, my: 60,
+      title: { de: "Verstecke in Grassrivers", en: "Hidden stashes in Grassrivers" },
+      where: { de: "Grassrivers · Sümpfe und Wasserwege", en: "Grassrivers · swamps and waterways" },
+      steps: { de: ["Mit dem Luftboot durch die Kanäle fahren", "Nach Kisten, Hütten und abgestellten Booten Ausschau halten", "Hier gut untertauchen, wenn du gesucht wirst"],
+               en: ["Ride an airboat through the channels", "Look for crates, shacks and abandoned boats", "A good place to lie low when you're wanted"] } }
+  ];
+
+  var steps = {
+    de: ["Prolog und erste Story-Missionen abschließen", "Vice City erkunden und Kartenmarkierungen aufdecken", "Erste Waffe und Panzerung kaufen",
+         "Einen sicheren Unterschlupf freischalten", "Kleine Jobs für das erste Startkapital erledigen", "Ein schnelles Fluchtfahrzeug besorgen",
+         "Alle sechs Regionen einmal besuchen", "Erstes Geschäft oder erste Immobilie kaufen", "Vor dem ersten großen Coup manuell speichern"],
+    en: ["Finish the prologue and first story missions", "Explore Vice City and reveal the map", "Buy your first weapon and armor",
+         "Unlock a safe house", "Do small jobs for your starting cash", "Get a fast getaway vehicle",
+         "Visit all six regions once", "Buy your first business or property", "Save manually before your first big heist"]
+  };
+
+  var donts = [
+    { de: ["Das erste Geld in Autos stecken", "Fahrzeuge kannst du am Anfang einfach auf der Straße finden. Spar dein Geld für Waffen, Panzerung und Immobilien."],
+      en: ["Spending your first money on cars", "Early on you can just find vehicles on the street. Save your money for weapons, armor and property."] },
+    { de: ["Ständig Fahndungslevel riskieren", "In früheren Teilen kosteten Krankenhaus und Verhaftung Geld oder Ausrüstung. Spiel bei wertvollen Jobs vorsichtig."],
+      en: ["Constantly risking a wanted level", "In earlier games, hospital and arrest cost money or gear. Play carefully on valuable jobs."] },
+    { de: ["Nebenmissionen ignorieren", "Kleine Aufträge schalten oft Kontakte, Geschäfte und bessere Jobs frei."],
+      en: ["Ignoring side missions", "Small jobs often unlock contacts, businesses and better work."] },
+    { de: ["Alles auf einmal kaufen", "Erst ein Geschäft, das Einnahmen bringt. Luxus kommt später."],
+      en: ["Buying everything at once", "First get a business that makes money. Luxury comes later."] },
+    { de: ["Ohne Speicherstand in große Coups", "Vor einem großen Raub manuell speichern, damit ein Fehler dich nicht die ganze Beute kostet."],
+      en: ["Going into big heists without saving", "Save manually before a big robbery so one mistake doesn't cost you the whole score."] },
+    { de: ["Auf Cheats und Glitches setzen", "Unbekannte „Money Glitches“ können Spielstände beschädigen und Online zu Sperren führen."],
+      en: ["Relying on cheats and glitches", "Unknown “money glitches” can corrupt saves and lead to bans online."] }
+  ];
+
+  var NS = "http://www.w3.org/2000/svg";
+  var pinsG = document.getElementById("pins");
+  var tabsEl = document.getElementById("ptabs");
+  var detail = document.getElementById("detail");
+  var cl = document.getElementById("checklist");
+  var current = "vice", filter = "alle";
+
+  places.forEach(function (p) {
+    var g = document.createElementNS(NS, "g");
+    g.setAttribute("class", "pin"); g.setAttribute("tabindex", "0"); g.setAttribute("role", "button");
+    g.setAttribute("aria-label", p.name);
+    g.dataset.id = p.id;
+    var ring = document.createElementNS(NS, "circle");
+    ring.setAttribute("class", "ring"); ring.setAttribute("cx", p.x); ring.setAttribute("cy", p.y); ring.setAttribute("r", 13);
+    var dot = document.createElementNS(NS, "circle");
+    dot.setAttribute("class", "dot"); dot.setAttribute("cx", p.x); dot.setAttribute("cy", p.y); dot.setAttribute("r", 7);
+    dot.setAttribute("fill", "#ff5470"); dot.setAttribute("stroke", "#fff"); dot.setAttribute("stroke-width", 2);
+    var tx = document.createElementNS(NS, "text");
+    var right = p.x < 260;
+    tx.setAttribute("x", right ? p.x + 16 : p.x - 16); tx.setAttribute("y", p.y + 4);
+    tx.setAttribute("text-anchor", right ? "start" : "end");
+    tx.textContent = p.name.toUpperCase();
+    g.appendChild(ring); g.appendChild(dot); g.appendChild(tx);
+    pinsG.appendChild(g);
+    g.addEventListener("click", function () { select(p.id); });
+    g.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(p.id); } });
+
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "ptab"; b.id = "tab-" + p.id; b.setAttribute("role", "tab");
+    b.dataset.id = p.id; b.innerHTML = "<span>" + p.name + "</span>";
+    b.addEventListener("click", function () { select(p.id); });
+    tabsEl.appendChild(b);
+  });
+
+  function select(id) {
+    current = id;
+    var p = places.filter(function (x) { return x.id === id; })[0];
+    document.querySelectorAll(".pin").forEach(function (g) { g.classList.toggle("active", g.dataset.id === id); });
+    document.querySelectorAll(".ptab").forEach(function (b) { b.setAttribute("aria-selected", b.dataset.id === id ? "true" : "false"); });
+    var bars = "";
+    for (var i = 1; i <= 5; i++) bars += '<i class="' + (i <= p.cash ? "on" : "") + '"></i>';
+    detail.setAttribute("aria-labelledby", "tab-" + id);
+    detail.innerHTML =
+      '<div class="label zone">' + p.zone[lang] + "</div>" +
+      "<h3>" + p.name + "</h3>" +
+      '<div class="meter"><div class="bars">' + bars + "</div><small>" + t("potential") + " " + p.cash + "/5</small></div>" +
+      "<p>" + p.text[lang] + "</p>" +
+      "<ul>" + p.tips[lang].map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ul>";
+  }
+
+  var spotsEl = document.getElementById("spots");
+  function renderSpots() {
+    spotsEl.innerHTML = spots.map(function (sp) {
+      var pl = places.filter(function (x) { return x.id === sp.place; })[0];
+      return '<article class="spot">' +
+        '<div class="shot ' + sp.scene + '" role="img" aria-label="' + sp.title[lang] + '">' +
+          '<span class="where">' + pl.name + '</span><span class="pay">' + sp.pay + '</span>' +
+          '<span class="mark" style="left:' + sp.mx + '%;top:' + sp.my + '%">$</span>' +
+          '<span class="ill">' + t("illu") + '</span></div>' +
+        '<div class="body"><h3>' + sp.title[lang] + '</h3>' +
+          '<div class="label zone" style="color:var(--aqua)">' + sp.where[lang] + '</div>' +
+          '<div class="label trick">' + t("trick") + '</div>' +
+          '<ol>' + sp.steps[lang].map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ol>' +
+          '<div class="foot"><span class="status">' + (sp.proven ? t("proven") : t("expected")) + '</span>' +
+          '<button type="button" class="tomap" data-place="' + sp.place + '">' + t("tomap") + '</button></div>' +
+        '</div></article>';
+    }).join("");
+  }
+  spotsEl.addEventListener("click", function (e) {
+    var b = e.target.closest(".tomap"); if (!b) return;
+    select(b.dataset.place);
+    document.getElementById("orte").scrollIntoView({ behavior: "smooth" });
+  });
+
+  var KEY = "gta6guide-checklist";
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { saved = {}; }
+  function renderChecklist() {
+    cl.innerHTML = "";
+    steps[lang].forEach(function (s, i) {
+      var li = document.createElement("li");
+      li.innerHTML = '<label for="step-' + i + '"><input type="checkbox" id="step-' + i + '"' + (saved[i] ? " checked" : "") + "><span>" + s + "</span></label>";
+      cl.appendChild(li);
+    });
+    update();
+  }
+  function update() {
+    var boxes = cl.querySelectorAll("input"), done = 0, state = {};
+    boxes.forEach(function (b, i) { if (b.checked) { done++; state[i] = true; } });
+    saved = state;
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    document.getElementById("prog-num").textContent = done + " / " + boxes.length;
+    document.getElementById("prog-bar").style.width = (done / boxes.length * 100) + "%";
+    document.getElementById("prog-text").textContent =
+      done === 0 ? t("prog_0") : done === boxes.length ? t("prog_all") : t("prog_left").replace("{n}", boxes.length - done);
+  }
+  cl.addEventListener("change", update);
+  document.getElementById("reset").addEventListener("click", function () {
+    cl.querySelectorAll("input").forEach(function (b) { b.checked = false; }); update();
+  });
+
+  function renderDonts() {
+    document.getElementById("donts").innerHTML = donts.map(function (d) {
+      return '<div class="dont"><span class="x">✕</span><div><h3>' + d[lang][0] + "</h3><p>" + d[lang][1] + "</p></div></div>";
+    }).join("");
+  }
+
+  var released = false;
+  function applyLang(l) {
+    lang = l;
+    try { localStorage.setItem("gta6guide-lang", l); } catch (e) {}
+    document.documentElement.lang = l;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) { el.innerHTML = t(el.dataset.i18n); });
+    document.getElementById("cd-note").innerHTML = released ? t("cd_out") : t("cd_note");
+    document.querySelectorAll(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false"); });
+    select(current); renderSpots(); renderChecklist(); renderDonts();
+  }
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () { applyLang(b.dataset.lang); });
+  });
+
+  var release = new Date("2026-11-19T00:00:00");
+  function pad(n) { return String(n).padStart(2, "0"); }
+  function tick() {
+    var diff = release - new Date();
+    if (diff <= 0) {
+      released = true;
+      document.getElementById("countdown").hidden = true;
+      document.getElementById("cd-note").innerHTML = t("cd_out");
+      return;
+    }
+    var s = Math.floor(diff / 1000);
+    document.getElementById("cd-d").textContent = Math.floor(s / 86400);
+    document.getElementById("cd-h").textContent = pad(Math.floor(s % 86400 / 3600));
+    document.getElementById("cd-m").textContent = pad(Math.floor(s % 3600 / 60));
+    document.getElementById("cd-s").textContent = pad(s % 60);
+    setTimeout(tick, 1000);
+  }
+
+  applyLang(lang);
+  tick();
+})();
+</script>
+
+</body>
+</html>
